@@ -12,9 +12,9 @@
 
 ![5](https://user-images.githubusercontent.com/74853558/99904994-14f25400-2cf4-11eb-9d85-3402415096fe.jpg)
 
-![6](https://user-images.githubusercontent.com/74853558/99904995-14f25400-2cf4-11eb-8ec3-440af41da0d3.jpg)
+![6](https://user-images.githubusercontent.com/74853558/99905235-a57d6400-2cf5-11eb-9f23-9140bd84b50f.jpg)
 
-![7](https://user-images.githubusercontent.com/74853558/99904996-158aea80-2cf4-11eb-8bb8-61d4b0b27b40.jpg)
+![7](https://user-images.githubusercontent.com/74853558/99905237-a7472780-2cf5-11eb-8387-13a4a12ac96b.jpg)
 
 ![8](https://user-images.githubusercontent.com/74853558/99904997-158aea80-2cf4-11eb-925a-c565d1dcbe6b.jpg)
 
