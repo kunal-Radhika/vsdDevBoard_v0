@@ -2,7 +2,7 @@
 This Project explains the importance of components used in the PCB design and also how data flows within the design.
 
 # Table of Contents
-- [Brief Introduction to Testing flow](![pcb design](https://user-images.githubusercontent.com/74853558/99901876-d6eb3500-2cdf-11eb-98e2-f7399bf56f47.jpg))
+- [Brief Introduction to Testing flow](#Brief Introduction to Testing flow)
 - [Introduction to FT2232H]()
 - [Data transfer from USB port to FT2232H]()
 - [Data transfer from FT2232H to SPI flash memory]()
