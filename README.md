@@ -4,8 +4,8 @@ This Project explains the importance of components used in the PCB design and al
 # Table of Contents
 - [Brief Introduction to Testing flow]()
 - [Introduction to FT2232H]()
-- [Data flow from USB port to FT2232H]()
-- [Data flow from FT2232H to SPI flash memory]()
+- [Data transfer from USB port to FT2232H]()
+- [Data transfer from FT2232H to SPI flash memory]()
 - [Future work]()
 - [Acknowledgements]()
 
@@ -24,7 +24,8 @@ The serial port of the computer usually meets RS-232 standard. It has signal vol
 The data is transferred from these two data lines using NRZI encoding.
 
 ![2](https://user-images.githubusercontent.com/74853558/99904990-128ffa00-2cf4-11eb-8bde-f9693f8e3624.jpg)
-# Data flow from USB port to FT2232H
+
+# Data transfer from USB port to FT2232H
 According to USB communication protocol, data is sent through packets. It consists of 3 common packets.
 
 ![3](https://user-images.githubusercontent.com/74853558/99904992-13c12700-2cf4-11eb-96e3-813c6a7b75de.jpg) 
@@ -55,6 +56,8 @@ The example code has a bitstream of 44bytes. This is sent from host to device th
 The data transfer from device to the host is done when host is ready to accept data, it sends token packet. The device then sends data.
 ![7](https://user-images.githubusercontent.com/74853558/99905237-a7472780-2cf5-11eb-8387-13a4a12ac96b.jpg)
 
+# Data transfer from FT2232H to SPI flash memory
+
 FT2232H has multiple configurations like synchronous bitbang interface, asynchronous bitbang interface and MPSSE (Multi-Protocol Synchronous Serial Engine) interface. MPSSE mode allows communication with different types of synchronous devices like SPI, I2C, JTAG etc.
 
 ![8](https://user-images.githubusercontent.com/74853558/99904997-158aea80-2cf4-11eb-925a-c565d1dcbe6b.jpg)
@@ -62,12 +65,17 @@ FT2232H has multiple configurations like synchronous bitbang interface, asynchro
 SPI communication has 4 modes for data transfer depending on clock polarity (CPOL) and clock phase (CPHA).  FTDI device can only support mode 0 and mode 2 whereas flash memory (S25FL128S) has only 2 clocking modes i.e mode 0 and mode 3.
 
 ![9](https://user-images.githubusercontent.com/74853558/99904999-16238100-2cf4-11eb-9220-c5b521bf7785.jpg)
+The data transfer between FT2232H and S25FL128S is done in the form of units called commands. These commands consist of instructions which tells the device operation and may also have address, latency period followed by data. The input data into the device is always latched in at the rising edge of the SCK signal and the output data is always available from the falling edge of the SCK clock signal.
 
 ![10](https://user-images.githubusercontent.com/74853558/99905000-16bc1780-2cf4-11eb-9f24-1c89a508696d.jpg)
 
 ![11](https://user-images.githubusercontent.com/74853558/99905001-16bc1780-2cf4-11eb-96d1-caabca6888cc.jpg)
 
+The memory is divided into sectors either a combination of 64KB and 4KB or a size of 256KB. For a sector size of 256KB, there can be total of 64 sectors for the memory and each sector is again divided into pages. Each page size can be a maximum of 512B. 
+
 ![12](https://user-images.githubusercontent.com/74853558/99905002-1754ae00-2cf4-11eb-8c51-300a52c790a7.jpg)
+
+The data is transferred in byte units and after each byte transmission the address byte is incremented automatically. For writing the data, the maximum data that can be written in one operation is upto 512B. For more data transfer, again instruction followed by address is sent.
 
 ![13](https://user-images.githubusercontent.com/74853558/99905003-1754ae00-2cf4-11eb-8f00-3c057b3d4974.jpg)
 
