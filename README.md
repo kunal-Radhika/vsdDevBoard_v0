@@ -26,6 +26,7 @@ The data is transferred from these two data lines using NRZI encoding.
 ![2](https://user-images.githubusercontent.com/74853558/99904990-128ffa00-2cf4-11eb-8bde-f9693f8e3624.jpg)
 
 # Data transfer from USB port to FT2232H
+
 According to USB communication protocol, data is sent through packets. It consists of 3 common packets.
 
 ![3](https://user-images.githubusercontent.com/74853558/99904992-13c12700-2cf4-11eb-96e3-813c6a7b75de.jpg) 
@@ -51,6 +52,7 @@ The following example code is considered to demonstrate how the data flows from 
 ![14](https://user-images.githubusercontent.com/74853558/99946186-f3e53e00-2d9b-11eb-94d2-cc161b408bdc.jpg)
 
 The example code has a bitstream of 44bytes. This is sent from host to device through data packet in data field.
+
 ![6](https://user-images.githubusercontent.com/74853558/99905235-a57d6400-2cf5-11eb-9f23-9140bd84b50f.jpg)
 
 The data transfer from device to the host is done when host is ready to accept data, it sends token packet. The device then sends data.
@@ -65,6 +67,7 @@ FT2232H has multiple configurations like synchronous bitbang interface, asynchro
 SPI communication has 4 modes for data transfer depending on clock polarity (CPOL) and clock phase (CPHA).  FTDI device can only support mode 0 and mode 2 whereas flash memory (S25FL128S) has only 2 clocking modes i.e mode 0 and mode 3.
 
 ![9](https://user-images.githubusercontent.com/74853558/99904999-16238100-2cf4-11eb-9220-c5b521bf7785.jpg)
+
 The data transfer between FT2232H and S25FL128S is done in the form of units called commands. These commands consist of instructions which tells the device operation and may also have address, latency period followed by data. The input data into the device is always latched in at the rising edge of the SCK signal and the output data is always available from the falling edge of the SCK clock signal.
 
 ![10](https://user-images.githubusercontent.com/74853558/99905000-16bc1780-2cf4-11eb-9f24-1c89a508696d.jpg)
