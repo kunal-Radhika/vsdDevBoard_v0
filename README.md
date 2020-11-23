@@ -24,17 +24,32 @@ The serial port of the computer usually meets RS-232 standard. It has signal vol
 The data is transferred from these two data lines using NRZI encoding.
 
 ![2](https://user-images.githubusercontent.com/74853558/99904990-128ffa00-2cf4-11eb-8bde-f9693f8e3624.jpg)
+# Data flow from USB port to FT2232H
 According to USB communication protocol, data is sent through packets. It consists of 3 common packets.
 
 ![3](https://user-images.githubusercontent.com/74853558/99904992-13c12700-2cf4-11eb-96e3-813c6a7b75de.jpg) 
 
+Data field can carry varying size of data depending upon the speed at which data is transferred.
+- For low speed devices, data can be upto 8B
+- For full speed devices, data can be upto 1023B
+- For high speed devices, data can be upto 1024B
+
 ![4](https://user-images.githubusercontent.com/74853558/99904993-1459bd80-2cf4-11eb-8905-544269d66b9f.jpg)
 
-Data is sent through endpoint buffers within the device.
+Basically, the data transaction can be done in 4 types:
+- Control: It is generally used by host for sending commands and parameters.
+- Interrupt: It is used by devices for sending small amounts of data. It is a polled message from the host to request specific data of the device
+- Bulk: this is used by devices for sending large amounts of data. 
+- Isochronous: this is generally used by devices like audio channels etc, for streaming real time data. 
+FTDI supports bulk data transaction. Data is sent through endpoint buffers within the device. FT2232H can have a maximum packet size of 512B.
 
 ![5](https://user-images.githubusercontent.com/74853558/99904994-14f25400-2cf4-11eb-9d85-3402415096fe.jpg)
 
+The following example code is considered to demonstrate how the data flows from one block to other. ( Image courtesy: [Shivanishah/riscv](https://github.com/shivanishah269/risc-v-core/blob/master/Images/main_ABI.png))
 
+![14](https://user-images.githubusercontent.com/74853558/99946186-f3e53e00-2d9b-11eb-94d2-cc161b408bdc.jpg)
+
+The example code has a bitstream of 44bytes. This is sent through data packet in data field.
 ![6](https://user-images.githubusercontent.com/74853558/99905235-a57d6400-2cf5-11eb-9f23-9140bd84b50f.jpg)
 
 ![7](https://user-images.githubusercontent.com/74853558/99905237-a7472780-2cf5-11eb-8387-13a4a12ac96b.jpg)
