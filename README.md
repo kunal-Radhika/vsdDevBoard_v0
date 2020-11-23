@@ -79,3 +79,9 @@ The data is transferred in byte units and after each byte transmission the addre
 
 ![13](https://user-images.githubusercontent.com/74853558/99905003-1754ae00-2cf4-11eb-8f00-3c057b3d4974.jpg)
 
+# Future work
+- Data transfer from flash memory to SOC and rest of the blocks.
+
+# Acknowledgements
+Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
+
