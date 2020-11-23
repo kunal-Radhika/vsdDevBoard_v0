@@ -30,7 +30,7 @@ An IDE ( Integrated Development Environment) is used for programming the PCB des
 * The boot process ends when the code in the SPI Flash jumps to the next stage of the boot software. This next stage of boot software is referred to as the BootLoader. 
 * The BootLoader can be customized by mapping the internal address at the SRAM by address bus and the code is typically sent through the data bus to the SRAM and which thus stores external code from Flash memory to the internal SRAM on the chip.
 * After the execution of the code, we can see the output of the program with the help of a serial terminal which is built-in in Freedom Studio IDE. The serial terminal will be displayed as a COM port. We can identify which COM port is being used by checking in the Device Manager >> Ports  section of the Control Panel.
-*Once the test board boots up, we can see the pattern/output we coded in the Freedom IDE software.
+* Once the test board boots up, we can see the pattern/output we coded in the Freedom IDE software.
 
 
 
