@@ -3,7 +3,7 @@ This project explains the importance of components used in the PCB design based 
 
 # Table of Contents
 - [Brief Introduction to Testing flow]()
-- [Booting Flow]
+- [Booting Flow]()
 - [Introduction to FT2232H]()
 - [Data transfer from USB port to FT2232H]()
 - [Data transfer from FT2232H to SPI flash memory]()
