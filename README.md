@@ -49,12 +49,17 @@ The following example code is considered to demonstrate how the data flows from 
 
 ![14](https://user-images.githubusercontent.com/74853558/99946186-f3e53e00-2d9b-11eb-94d2-cc161b408bdc.jpg)
 
-The example code has a bitstream of 44bytes. This is sent through data packet in data field.
+The example code has a bitstream of 44bytes. This is sent from host to device through data packet in data field.
 ![6](https://user-images.githubusercontent.com/74853558/99905235-a57d6400-2cf5-11eb-9f23-9140bd84b50f.jpg)
 
+The data transfer from device to the host is done when host is ready to accept data, it sends token packet. The device then sends data.
 ![7](https://user-images.githubusercontent.com/74853558/99905237-a7472780-2cf5-11eb-8387-13a4a12ac96b.jpg)
 
+FT2232H has multiple configurations like synchronous bitbang interface, asynchronous bitbang interface and MPSSE (Multi-Protocol Synchronous Serial Engine) interface. MPSSE mode allows communication with different types of synchronous devices like SPI, I2C, JTAG etc.
+
 ![8](https://user-images.githubusercontent.com/74853558/99904997-158aea80-2cf4-11eb-925a-c565d1dcbe6b.jpg)
+
+SPI communication has 4 modes for data transfer depending on clock polarity (CPOL) and clock phase (CPHA).  FTDI device can only support mode 0 and mode 2 whereas flash memory (S25FL128S) has only 2 clocking modes i.e mode 0 and mode 3.
 
 ![9](https://user-images.githubusercontent.com/74853558/99904999-16238100-2cf4-11eb-9220-c5b521bf7785.jpg)
 
