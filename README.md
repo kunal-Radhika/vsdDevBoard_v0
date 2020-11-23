@@ -2,12 +2,12 @@
 This Project explains the importance of components used in the PCB design and also how data flows within the design.
 
 # Table of Contents
-- [Brief Introduction to Testing flow] (#Brief Introduction to Testing flow)
-- [Introduction to FT2232H]()
-- [Data transfer from USB port to FT2232H]()
-- [Data transfer from FT2232H to SPI flash memory]()
-- [Future work]()
-- [Acknowledgements]()
+- [Brief Introduction to Testing flow](# Brief Introduction to Testing flow)
+- [Introduction to FT2232H](# Introduction to FT2232H)
+- [Data transfer from USB port to FT2232H](# Data transfer from USB port to FT2232H )
+- [Data transfer from FT2232H to SPI flash memory](# Data transfer from FT2232H to SPI flash memory)
+- [Future work](# Future work)
+- [Acknowledgements](# Acknowledgements)
 
 # Brief Introduction to Testing flow
 An IDE ( Integrated Development Environment) is used for programming the PCB design. For an IDE to recognize the hardware board, a Board Support Package(BSP) which includes hardware description and linker files for memory mapping are used and after programming, the hex files are generated. The resultant bitstream is passed to the following PCB design.
