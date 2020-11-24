@@ -81,7 +81,7 @@ The memory is divided into sectors either a combination of 64KB and 4KB or a siz
 
 The data is transferred in byte units and after each byte transmission the address byte is incremented automatically. For writing the data, the maximum data that can be written in one operation is upto 512B. For more data transfer, again instruction followed by address is sent.
 
-
+![data_in_memory](https://user-images.githubusercontent.com/74853558/100078361-725be180-2e69-11eb-880b-ff699904b5ab.jpg)
 
 # Future work
 - Data transfer from flash memory to SOC and rest of the blocks.
