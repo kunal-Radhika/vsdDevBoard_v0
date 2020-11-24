@@ -3,7 +3,6 @@ This project explains the importance of components used in the PCB design based 
 
 # Table of Contents
 - [Brief Introduction to Testing flow]()
-- [Booting Flow]()
 - [Introduction to FT2232H]()
 - [Data transfer from USB port to FT2232H]()
 - [Data transfer from FT2232H to SPI flash memory]()
@@ -15,24 +14,6 @@ This project explains the importance of components used in the PCB design based 
 An IDE ( Integrated Development Environment) is used for programming the PCB design. For an IDE to recognize the hardware board, a Board Support Package(BSP) which includes hardware description and linker files for memory mapping are used and after programming, the hex files are generated. The resultant bitstream is passed to the following PCB design.
 
 ![pcb design](https://user-images.githubusercontent.com/74853558/99901876-d6eb3500-2cdf-11eb-98e2-f7399bf56f47.jpg)
-
-# Booting Flow
-* The boot process begins at Power On Reset (POR) where the hardware reset logic forces the RISC-V to begin execution starting from the on-chip SPI Flash. 
-* When connecting the board to the Laptop or Desktop the medium of connection for exchanging data is usually through RS-232, but the output swing of RS-232 is between -13V to +13V which is not in case of microprocessors. In microprocessors the output swing is can range from 5.5V to 3.3V/1.8V. 
-* For now, let's consider the programming of the chip can be done from Freedom Studio IDE (Integrated Development Environment)
-* We use a USB type A-to-B cable that can be used to connect a host system to the board for data transfer from the Local device to the board, once connected, the LEDs will glow to indicate the main 5V power supply is active along with 3.3V and 1.8V supply.
-* We use a special FTDI chip (FT2232H) which converts the data from USB to SPI to transfer the data serially to the chip.
-* The rate at which the data is transferred should be synchronized. That is, the sending capability of the data from the laptop to the receiving capability of the FTDI chip is termed as the BAUD rate. The BAUD rate is normally set as 9.8Mbits. 
-* And hence the data is received without any data loss into the FTDI chip.
-* The processor can boot from an SPI flash. The device is accessed through a 4-wire SPI Interface consisting of a Serial Data Input (SI), Serial Data Output (SO), Serial Clock (SCK), and Chip Select (CSB).  Instructions are sent via the SDI pin to encode instructions, addresses, or input data to the device on the rising edge of SCK.
-* We can provide the simple test program with the bootloader that should print in the console and should cycle in a certain fashion to glow the LEDs on board or to display “Hello World” via UART.This test program will be overwritten in the SPI Flash when you program a new program onto the board but the bootloader code will not be modified. 
-* The boot starts when the CPU is released from reset (for example, on power up) and executes code in the internal SPI Flash at the reset exception address. The SPI Flash code brings the SoC out of reset and into a known state. 
-* The boot process ends when the code in the SPI Flash jumps to the next stage of the boot software. This next stage of boot software is referred to as the BootLoader. 
-* The BootLoader can be customized by mapping the internal address at the SRAM by address bus and the code is typically sent through the data bus to the SRAM and which thus stores external code from Flash memory to the internal SRAM on the chip.
-* After the execution of the code, we can see the output of the program with the help of a serial terminal which is built-in in Freedom Studio IDE. The serial terminal will be displayed as a COM port. We can identify which COM port is being used by checking in the Device Manager >> Ports  section of the Control Panel.
-* Once the test board boots up, we can see the pattern/output we coded in the Freedom IDE software.
-
-
 
 # Introduction to FT2232H
 The serial port of the computer usually meets RS-232 standard. It has signal voltage swing of around -13 to +13V. The PCB design uses TTL serial (Transistor-Transistor logic) which has signal voltage level between 0 and VDD ( 3.3V/1.8V). A common communication protocol is needed for data transfer, hence FT2232H is used for converting USB to serial converter.
