@@ -13,10 +13,12 @@ This project explains the importance of components used in the PCB design based 
 # Brief Introduction to Testing flow
 An IDE ( Integrated Development Environment) is used for programming the PCB design. For an IDE to recognize the hardware board, a Board Support Package(BSP) which includes hardware description and linker files for memory mapping are used and after programming, the hex files are generated. The resultant bitstream is passed to the following PCB design.
 
-![pcb design](https://user-images.githubusercontent.com/74853558/99901876-d6eb3500-2cdf-11eb-98e2-f7399bf56f47.jpg)
+![pcb design](https://user-images.githubusercontent.com/74853558/100327317-29369980-2ff1-11eb-89cd-68573a5428a9.jpg)
+
+![soc](https://user-images.githubusercontent.com/74853558/100327323-2a67c680-2ff1-11eb-9d27-5f88d06b1530.jpg)
 
 # Introduction to FT2232H
-The serial port of the computer usually meets RS-232 standard. It has signal voltage swing of around -13 to +13V. The PCB design uses TTL serial (Transistor-Transistor logic) which has signal voltage level between 0 and VDD ( 3.3V/1.8V). A common communication protocol is needed for data transfer, hence FT2232H is used for converting USB to serial converter.
+The serial port of the computer usually meets RS-232 standard. It has signal voltage swing of around -13 to +13V. The PCB design uses TTL serial (Transistor-Transistor logic) which has signal voltage level between 0 and VDD ( 3.3V/1.8V). A common communication protocol is needed for data transfer i.e data has to be transferred at same baud rate and at same endianness. hence FT2232H is used for converting USB to serial converter.
   
   For the data transfer from host to the target (board), we connect USB cable ( USB type A to the PC and Type B to the board).  USB has 4 signals, 5V power supply signal, ground and 2 data signals(D+ and D-). 
 
@@ -79,7 +81,7 @@ The memory is divided into sectors either a combination of 64KB and 4KB or a siz
 
 ![12](https://user-images.githubusercontent.com/74853558/99905002-1754ae00-2cf4-11eb-8c51-300a52c790a7.jpg)
 
-The data is transferred in byte units and after each byte transmission the address byte is incremented automatically. For writing the data, the maximum data that can be written in one operation is upto 512B. For more data transfer, again instruction followed by address is sent.
+The data is transferred in byte units and after each byte transmission the address byte is incremented automatically. Also, data is tranfer in little endian fashion.For writing the data, the maximum data that can be written in one operation is upto 512B. For more data transfer, again instruction followed by address is sent.
 
 ![data_in_memory](https://user-images.githubusercontent.com/74853558/100078361-725be180-2e69-11eb-880b-ff699904b5ab.jpg)
 
