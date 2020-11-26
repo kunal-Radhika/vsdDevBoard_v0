@@ -17,7 +17,7 @@ An IDE ( Integrated Development Environment) is used for programming the PCB des
 
 The internal SOC consists of RISC V, SRAM, GPIOs and PLL which can be provided by sky130 PDK and rest of the components like ADC, UART module and timers has to be included in the Bill Of Materials (BOM).
 
-![soc](https://user-images.githubusercontent.com/74853558/100328776-e7a6ee00-2ff2-11eb-988f-526eb015d342.jpg)
+![soc](https://user-images.githubusercontent.com/74853558/100329120-48362b00-2ff3-11eb-9f7b-6e57aea43f0f.jpg)
 
 # Introduction to FT2232H
 The serial port of the computer usually meets RS-232 standard. It has signal voltage swing of around -13 to +13V. The PCB design uses TTL serial (Transistor-Transistor logic) which has signal voltage level between 0 and VDD ( 3.3V/1.8V). A common communication protocol is needed for data transfer i.e data has to be transferred at same baud rate and at same endianness. hence FT2232H is used for converting USB to serial converter.
