@@ -15,6 +15,8 @@ An IDE ( Integrated Development Environment) is used for programming the PCB des
 
 ![pcb design](https://user-images.githubusercontent.com/74853558/100327317-29369980-2ff1-11eb-89cd-68573a5428a9.jpg)
 
+The internal SOC consists of RISC V, SRAM, GPIOs and PLL which can be provided by sky130 PDK and rest of the components like ADC, UART module and timers has to be included in the Bill Of Materials (BOM).
+
 ![soc](https://user-images.githubusercontent.com/74853558/100327323-2a67c680-2ff1-11eb-9d27-5f88d06b1530.jpg)
 
 # Introduction to FT2232H
