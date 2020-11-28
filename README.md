@@ -95,6 +95,6 @@ The data is transferred in byte units and after each byte transmission the addre
 Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
 
 # Contact information
-- Radhika, M.Tech in Integrated Circuit Technology, University of Hyderabad (UOH), Hyderabad [akurathiradhika29@gmail.com]()
-- Kunal, B.Tech in Vidyalankar Institute of Technology, Wadala, Mumbai [kunalkokate2753@gmail.com]()
+- Radhika, M.Tech in Integrated Circuit Technology, University of Hyderabad (UOH), Hyderabad [akurathiradhika29@gmail.com](mailto:akurathiradhika29@gmail.com)
+- Kunal, B.E in Electronics Engineering, Vidyalankar Institute of Technology, Wadala, Mumbai [kunalkokate2753@gmail.com]()
 - Kunal Ghosh, CO-founder,VSD Corp. Pvt. Ltd [kunalghosh@gmail.com]()
