@@ -92,7 +92,7 @@ The data is transferred in byte units and after each byte transmission the addre
 - Data transfer from flash memory to SOC and rest of the blocks.
 
 # Acknowledgements
-Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
+- Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
 
 # Contact information
 - Radhika, M.Tech in Integrated Circuit Technology, University of Hyderabad (UOH), Hyderabad [akurathiradhika29@gmail.com](mailto:akurathiradhika29@gmail.com)
