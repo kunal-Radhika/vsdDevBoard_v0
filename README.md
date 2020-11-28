@@ -62,7 +62,8 @@ The example code has a bitstream of 44bytes. This is sent from host to device th
 ![6](https://user-images.githubusercontent.com/74853558/99905235-a57d6400-2cf5-11eb-9f23-9140bd84b50f.jpg)
 
 The data transfer from device to the host is done when host is ready to accept data, it sends token packet. The device then sends data.
-![7](https://user-images.githubusercontent.com/74853558/99905237-a7472780-2cf5-11eb-8387-13a4a12ac96b.jpg)
+
+![host_to_device1](https://user-images.githubusercontent.com/74853558/100518915-9f3a2c80-31ba-11eb-9114-3f81d1b110af.jpg)
 
 # Data transfer from FT2232H to SPI flash memory
 
