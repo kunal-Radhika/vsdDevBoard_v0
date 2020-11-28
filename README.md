@@ -14,11 +14,11 @@ This project explains the importance of components used in the PCB design based 
 # Brief Introduction to data flow
 An IDE ( Integrated Development Environment) is used for programming the PCB design. For an IDE to recognize the hardware board, a Board Support Package(BSP) which includes hardware description and linker files for memory mapping are used and after programming, the hex files are generated. The resultant bitstream is passed to the following PCB design.
 
-![pcb_design](https://user-images.githubusercontent.com/74853558/100496925-1b624f00-317e-11eb-8f03-9d82539e07d3.jpg)
+![pcb_design1](https://user-images.githubusercontent.com/74853558/100513986-368d8880-3197-11eb-90f3-714ec8161aff.jpg)
 
 The internal SOC consists of RISC V, SRAM, GPIOs and PLL which can be provided by sky130 PDK and rest of the components like ADC, UART module and timers has to be included in the Bill Of Materials (BOM).
 
-![soc](https://user-images.githubusercontent.com/74853558/100496482-611d1880-317a-11eb-8335-921bb9078f1f.jpg)
+![soc1](https://user-images.githubusercontent.com/74853558/100513987-38574c00-3197-11eb-9a44-52ca43fd0288.jpg)
 
 # Introduction to FT2232H
 The serial port of the computer usually meets RS-232 standard. It has signal voltage swing of around -13 to +13V. The PCB design uses TTL serial (Transistor-Transistor logic) which has signal voltage level between 0 and VDD ( 3.3V/1.8V). A common communication protocol is needed for data transfer i.e data has to be transferred at same baud rate and at same endianness. hence FT2232H is used for converting USB to serial converter.
