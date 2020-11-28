@@ -13,7 +13,7 @@ This project explains the importance of components used in the PCB design based 
 # Brief Introduction to Testing flow
 An IDE ( Integrated Development Environment) is used for programming the PCB design. For an IDE to recognize the hardware board, a Board Support Package(BSP) which includes hardware description and linker files for memory mapping are used and after programming, the hex files are generated. The resultant bitstream is passed to the following PCB design.
 
-![pcb_design](https://user-images.githubusercontent.com/74853558/100496480-5febeb80-317a-11eb-82d3-22d8600e6d7a.jpg)
+![pcb_design](https://user-images.githubusercontent.com/74853558/100496925-1b624f00-317e-11eb-8f03-9d82539e07d3.jpg)
 
 The internal SOC consists of RISC V, SRAM, GPIOs and PLL which can be provided by sky130 PDK and rest of the components like ADC, UART module and timers has to be included in the Bill Of Materials (BOM).
 
