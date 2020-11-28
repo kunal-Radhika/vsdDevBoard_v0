@@ -1,4 +1,4 @@
-# SOC Design For Testing Digital IP chips (RISC V and SRAM)
+# vsdDevBoard_v0
 This project explains the importance of components used in the PCB design based on the RISC V and SRAM are on the single chip for testing the entire PCB board and also explains how data flows within the design right from writing the code in C in a Software IDE/SDK to transmitting the code to the Flash Memory.
 
 # Table of Contents
