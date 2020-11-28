@@ -2,7 +2,7 @@
 This project explains the importance of components used in the PCB design based on the RISC V and SRAM are on the single chip for testing the entire PCB board and also explains how data flows within the design right from writing the code in C in a Software IDE/SDK to transmitting the code to the Flash Memory.
 
 # Table of Contents
-- [Brief Introduction to Testing flow](#brief-introduction-to-testing-flow)
+- [Brief Introduction to data flow](#brief-introduction-to-data-flow)
 - [Introduction to FT2232H](#introduction-to-ft2232h)
 - [Data transfer from USB port to FT2232H](#data-transfer-from-usb-port-to-ft2232h)
 - [Data transfer from FT2232H to SPI flash memory](#data-transfer-from-ft2232h-to-spi-flash-memory)
@@ -11,7 +11,7 @@ This project explains the importance of components used in the PCB design based 
 - [Contact information](#contact-information)
 
 
-# Brief Introduction to Testing flow
+# Brief Introduction to data flow
 An IDE ( Integrated Development Environment) is used for programming the PCB design. For an IDE to recognize the hardware board, a Board Support Package(BSP) which includes hardware description and linker files for memory mapping are used and after programming, the hex files are generated. The resultant bitstream is passed to the following PCB design.
 
 ![pcb_design](https://user-images.githubusercontent.com/74853558/100496925-1b624f00-317e-11eb-8f03-9d82539e07d3.jpg)
