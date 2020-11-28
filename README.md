@@ -8,6 +8,7 @@ This project explains the importance of components used in the PCB design based 
 - [Data transfer from FT2232H to SPI flash memory](#data-transfer-from-ft2232h-to-spi-flash-memory)
 - [Future work](#future-work)
 - [Acknowledgements](#acknowledgements)
+- [Contact information](#contact-information)
 
 
 # Brief Introduction to Testing flow
@@ -93,3 +94,7 @@ The data is transferred in byte units and after each byte transmission the addre
 # Acknowledgements
 Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
 
+# Contact information
+Radhika, M.Tech in Integrated Circuit Technology, University of Hyderabad [akurathiradhika29@gmail.com]()
+Kunal, B.Tech in Vidyalankar Institute of Technology, Wadala, Mumbai [kunalkokate2753@gmail.com]()
+Kunal Ghosh, CO-founder,VSD Corp. Pvt. Ltd [kunalghosh@gmail.com]()
